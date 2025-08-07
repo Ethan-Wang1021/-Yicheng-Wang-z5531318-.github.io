@@ -1,1 +1,188 @@
 # -Yicheng-Wang-z5531318-.github.io
+<!--
+REFERENCES:
+
+1. Picard, R. W. (1997). *Affective Computing*. MIT Press.
+  
+2. McStay, A. (2018). *Emotional AI: The Rise of Empathic Media*. Sage.
+
+3. Vincent, J. (2019). “Emotion recognition tech is being used to monitor Chinese workers’ brains.”
+   The Verge. https://www.theverge.com/2019/5/1/18513204
+
+4. Li, S. et al. (2020). “Automatic Generation of Social Media Responses Based on Emotional Detection.”
+   Neurocomputing, 408, 204–213.
+
+5. Privacy International (2021). “Our Quantified Selves: Privacy Implications of Wearable Tech.”
+   https://privacyinternational.org
+-->
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Affect OS —Emotional Watch</title>
+  <meta name="theme-color" content="#0b0f1a" />
+  <link rel="stylesheet" href="final.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="gate" id="gate" role="dialog" aria-modal="true">
+    <div class="gate__panel">
+      <h1>Affect OS-Emotional Watch</h1>
+      <p>This is Loki's daily life with the emotional watch - from the moment he fell silent, the system began to express for him.</p>
+      <div class="gate__actions">
+        <label class="checkbox">
+          <input type="checkbox" id="agree" />
+          <span>Continue to enter the system means you are willing to step into his daily life controlled by Affect OS</span>
+        </label>
+        <button id="enterBtn" disabled>Start</button>
+      </div>
+      <small>Note: This website contains audio/video; you can turn the audio and theme on or off in the upper right corner. When you open the web page for the first time, you may not be able to see the video and need to refresh it twice more.</small>
+    </div>
+  </div>
+  <header class="topbar" aria-label=
+    <div class="brand">Affect OS-Yicheng Wang z5531318<span class="dot"></span></div>
+    <nav class="actions">
+      <button id="audioToggle" aria-pressed="false" title=>🔊</button>
+      <button id="themeToggle" aria-pressed="false" title=>🌓</button>
+    </nav>
+  </header>
+
+  <aside class="toc" aria-label="strat">
+    <button class="dotnav" data-target="#hero" aria-label=></button>
+    <button class="dotnav" data-target="#chat" aria-label=></button>
+    <button class="dotnav" data-target="#lab" aria-label=></button>
+    <button class="dotnav" data-target="#news" aria-label=></button>
+    <button class="dotnav" data-target="#credits" aria-label=></button>
+  </aside>
+
+  <main>
+   
+  <section id="hero" class="section hero" aria-labelledby="heroTitle">
+      <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="media/p1.jpg">
+        <source src="media/v1.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero__glass">
+        <h2 id="heroTitle">Emotional data is being synchronized</h2>
+        <p>2041, in Sydney Loki's <Affect> emotional watch </Affect> sent a message to other at night.</p>
+
+        <div class="control">
+          <label for="mood">Emotion value: <span id="moodLabel">50</span></label>
+          <input type="range" id="mood" min="0" max="100" value="50" />
+        </div>
+
+        <div class="autoreply" aria-live="polite">
+          <div class="autoreply__title">Automatic reply</div>
+          <p id="autoText">Received. I'm fine. I'll reply to you later. </p>
+        </div>
+      </div>
+      <div class="loki-fixed loki-hero">
+  <strong>LOKI:</strong>
+  <p>My name is Loki and I'm an introverted person. Today is June 11th, 2041, which is my 20th birthday, but I haven't received any blessings. Tonight, my emotional value dropped to 39. My phone vibrated. It was a message from my mom asking if I had eaten. My Affect os watch automatically replied to me: Sorry, I am in a bad mood today. I will tidy myself up as soon as possible. But these words are not what I really want to say. This watch of mine will monitor my heart rate, tone and pulse, and then decide what is "appropriate" to reply with. Sometimes I wonder: Can it really help me reduce social pressure, or just keep me silent?
+Yes, it's very convenient. But convenience does not equal truth.</p>
+  <p>I'm beginning to forget what it feels like to speak up for myself.</p>
+</div>
+    </section>
+
+    <section id="chat" class="section chat" aria-labelledby="chatTitle" data-no-mood>
+      <h2 id="chatTitle">Who is expressing emotions?</h2>
+      <div class="chat__stream">
+        <article class="bubble from-them" data-inner=>
+          <header>Loki's friend: Alex</header>
+          <p>"Are you okay? You sound a bit distant today."</p>
+        </article>
+
+        <article class="bubble from-me" data-inner="Received. I'm fine. I'll reply to you later.">
+          <header>Loki</header>
+          <p class="maskable">"I want to say no, but the system always optimizes unhappiness into a good mood"</p>
+          <button class="reveal" title="True emotion">True emotion (click me)</button>
+        </article>
+
+        <article class="bubble from-them" data-inner=>
+          <header>Loki's friend: Jade</header>
+          <p>"Perhaps we should have a face-to-face chat instead of letting the watch do it for you."</p>
+        </article>
+
+        <article class="bubble from-me" data-inner="Agreed. Let's find a quiet place to meet.">
+          <header>Loki</header>
+          <p class="maskable">"Is face-to-face chatting the only freedom I can choose?"</p>
+          <button class="reveal" title="true emotion">true emotion (click me) </button>
+        </article>
+      </div>
+      <div class="loki-fixed loki-chat">
+  <strong>LOKI:</strong>
+  <p>My friend's answers always sound so certain and so calm. But perhaps, that's because their messages were "optimized" by the system before they were sent out.</p>
+  <p>I'm always hesitant about this system, wavering between "my true feelings" and "what the watch thinks I should express". Sometimes I wonder: Did I really say that? Or was that just the most peaceful option picked out by the system?</p>
+  <p>In the past, my conversations with others were unpredictable and real. But now, as soon as my mood drops or my voice starts to tremble, the system begins to adjust the way I reply to messages. It will detect my mood in real time for me. Sometimes I don't even have time to see clearly before I send it out, and I don't even need to decide "send" it.</p>
+  <p>When a friend asks me, "Are you okay?" " Actually, what I want to say is "Not so good." But what the system sent for me was: "Received. I'm fine." I'll get back to you later." Was that really what I said? Or did the watch say it on my behalf?</p>
+  <p>Face-to-face communication is rarely seen nowadays. Many people say they like clear and efficient communication, so they really like Affect OS. But the price of this convenience seems like a kind of "silence".</p>
+  <p>I don't know if my friends can still deny my "true voice".
+     I'm not sure if I can still recognize it myself.</p>
+  <p>So I continue to choose to reply. This might also be the mainstream of this era. I have also been waiting for the moment when I can speak with my own voice again. Or, wait until someone can perceive the difference between them.</p>
+</div>
+      <p class="hint">Tip: Click "true emotion" to switch between automatic expression and real feeling.</p>
+    </section>
+
+    <section id="lab" class="section lab" aria-labelledby="labTitle">
+      <h2 id="labTitle">Affect OS in Action</h2>
+      <div class="lab__grid">
+        <video class="panel" src="media/v2.mp4" controls preload="metadata"></video>
+        <div class="panel glass">
+          <h3>Excerpt from the record</h3>
+          <p>"When the value is around 60, it will actively optimize the reply."</p>
+          <ul class="specs">
+            <li>Emition value:<span id="hrv">60</span></li>
+            <li>Reply tone: <span id="tone">medium</span></li>
+            <li>Data source: Emotional watch </li>
+          </ul>
+        </div>
+      </div>
+<div class="loki-fixed loki-lab">
+  <strong>LOKI :</strong>
+  <p>This is an experiment I designed to test the reliability of the Affect OS system. When I was in a low mood, I deliberately had a conversation with my friends to see how the system would respond on my behalf. The result didn't surprise me: it always chose the mildest language, even though that wasn't what I really wanted to say. This made me start to wonder whether this kind of "optimization" was really helping me or controlling me? When every expression is interfered with by the system, do I still have my own voice? This experiment is just the beginning. I want to gain a deeper understanding of the logic and intention behind this system.</p>
+</div>
+
+    </section>
+
+    <section id="news" class="section news" aria-labelledby="newsTitle">
+      <h2 id="newsTitle">News: Automatic responses trigger communication conflicts</h2>
+      <article class="card">
+        <p><time datetime="2037-04-18">January 14, 2042 — Sydney</time></p>
+        <p>After more than 300 formal complaints were submitted by Affect OS users in Australia, the system is under public scrutiny. The controversy centers on the system's automatic reply function, with many people claiming that it has issued emotionally neutral or misleading responses without the user's explicit consent.</p>
+        <p>One user said, I have never said I am fine. But my watch replied automatically. That is not what I wanted to express. Some complaints point to serious misunderstandings and emotional distress caused by the message not reflecting the sender's true intentions.</p>
+        <p>In a highly watched case, it was reported that a misunderstanding caused by an automatically generated apology message led to the cancellation of a major public contract.</p>
+        <p>Digital rights groups have called for enhanced regulation and transparency, and warned that convenience should not come at the expense of emotional autonomy.</p>
+        <p>This incident has once again sparked a debate on algorithmic communication: should we focus more on our true emotions or on convenience and efficiency</p>
+      </article>
+
+<div class="loki-fixed loki-news">
+  <strong>LOKI:</strong>
+  <p>When I saw in the news that "the system's automatic reply caused communication misunderstandings", I felt relieved. That was not an unfamiliar event, but a reality I experience every day. With over 300 complaints, I believe these users, like me, have finally realized that the phrase "I'm fine" might never have been our own voice.</p>
+  <p>I clearly remember my birthday last year. That day, I was in a low mood and my mind was in a mess, but I saw my watch say on my behalf: "Everything is fine. Thank you for your concern." I didn't even have time to hesitate whether to send it or not; it had already sent it for me. When I first started using this software, I only thought it was convenient. It could help me reply automatically. But now I'm starting to be afraid. It's gradually "replacing" me and becoming the entirety of my life.</p>
+  <p>Once I thought that Affect OS could make people understand each other better and reduce conflicts during communication. But after long-term use, I found that it was like a filter, sifting out all the "conflicting" elements, leaving only polite responses and silence. At first, we all thought this was a system to reduce our social pressure, but now it seems that this is our compromise with technology.</p>
+  <p>More and more, I wonder: do we still have the chance to express our emotions, or are we being selected by algorithms? Are we speaking, or are we just letting the system say what it considers "reasonable" instead of us?</p>
+  <p>This news is like a wake-up call from technology to us. I can't guarantee what problems this system will encounter, nor can I determine whether the next "apology" issued by the system means I'm really wrong.</p>
+  <p>I'm not against convenience, but I'm against losing control. If I can't even tell what I'm really saying, then who else can understand me?</p>
+  <p>I began to understand that true communication is never merely about what is expressed, but rather who makes the voice.</p>
+  <p>Now, I want to speak up for myself again, my hesitation, my silence, and my choices.</p>
+</div>
+
+    </section>
+
+    <section id="credits" class="section credits" aria-labelledby="creditsTitle">
+      <h2 id="creditsTitle">Production information</h2>
+      <ul>
+        <li>Story/edit: Yicheng Wang</li>
+        <li>Music Design: Yicheng Wang</li>
+        <li>Completion date: August 3, 2025</li>
+      </ul>
+      <p class="legal">Declaration: All videos and audios in this work are created by myself and do not contain any stock materials. When you open the web page for the first time, you may not be able to see the video and need to refresh it twice more.</p>
+    </section>
+  </main>
+  <audio id="ambience" src="sounds/soud1.MP3.mp3" loop preload="auto"></audio>
+
+  <script src="final.js" defer></script>
+</body>
+</html>
